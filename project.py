@@ -1,9 +1,9 @@
 import streamlit as st
 from ultralytics import YOLO
 from PIL import Image, ImageDraw
-import pyttsx3
 import numpy as np
 import time
+import os
 
 # =====================
 # Page Config
@@ -21,20 +21,29 @@ st.set_page_config(
 def load_model(path):
     return YOLO(path)
 
+# Use relative path for Streamlit Cloud
 model_path = "best.pt"
 model = load_model(model_path)
 
 # =====================
-# Text-to-Speech
+# Text-to-Speech (Cloud Safe)
 # =====================
 def speak(text):
-    engine = pyttsx3.init("sapi5")
-    engine.setProperty("rate", 170)
-    voices = engine.getProperty("voices")
-    engine.setProperty("voice", voices[0].id)
-    engine.say(text)
-    engine.runAndWait()
-    engine.stop()
+    try:
+        # Skip voice feedback on Streamlit Cloud
+        if os.environ.get("STREAMLIT_SERVER_RUNNING", "false") == "true":
+            return
+
+        import pyttsx3
+        engine = pyttsx3.init("sapi5")
+        engine.setProperty("rate", 170)
+        voices = engine.getProperty("voices")
+        engine.setProperty("voice", voices[0].id)
+        engine.say(text)
+        engine.runAndWait()
+        engine.stop()
+    except Exception as e:
+        print(f"TTS error: {e}")
 
 # =====================
 # Sidebar Settings
@@ -67,7 +76,7 @@ st.markdown(
 )
 
 st.markdown("<h1 class='main-title'>♻️ Smart Waste Segregation System</h1>", unsafe_allow_html=True)
-st.markdown("<h4 class='subtitle'> Enhancing waste management through AI-powered classification</h4>", unsafe_allow_html=True)
+st.markdown("<h4 class='subtitle'>Enhancing waste management through AI-powered classification</h4>", unsafe_allow_html=True)
 st.markdown("---")
 
 # =====================
@@ -184,9 +193,7 @@ st.markdown(
     """
     <div style='text-align:center; color:#666; font-size:16px;'>
         Made with ❤️ by <strong>Mohamed Zuhair</strong>
-                    
     </div>
     """,
     unsafe_allow_html=True
 )
-
