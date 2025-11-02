@@ -1,0 +1,4 @@
+streamlit
+ultralytics==8.2.50
+pillow
+numpy
