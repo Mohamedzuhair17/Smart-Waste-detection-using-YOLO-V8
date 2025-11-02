@@ -1,6 +1,0 @@
-streamlit
-ultralytics
-torch
-opencv-python
-pillow
-numpy
