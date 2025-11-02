@@ -21,7 +21,7 @@ st.set_page_config(
 def load_model(path):
     return YOLO(path)
 
-model_path = r"C:\Users\moham\OneDrive\Desktop\object\runs\detect\garbage_fast_quality\weights\best.pt"
+model_path = "best.pt"
 model = load_model(model_path)
 
 # =====================
@@ -189,3 +189,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
