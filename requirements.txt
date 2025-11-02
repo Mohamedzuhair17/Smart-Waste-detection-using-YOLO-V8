@@ -1,8 +1,6 @@
 torch==2.5.1
-torchvision==0.20.1
-torchaudio==2.5.1
-ultralytics>=8.3.0
-streamlit
-pillow
-numpy
+torchvision==0.24.0
+ultralytics
 opencv-python-headless
+numpy
+streamlit
