@@ -1,3 +1,23 @@
+<!-- EFFECTS-BLOCK:START -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=F6F1EA&height=180&section=header&text=Smart%20Waste%20Detection%20Using%20YOLO%20V8&fontSize=44&fontColor=111111&desc=Real-time%20waste%20classification%20inference%20engine%20using%20custom%20YOLOv8%20pipeline%20for%20production%20segregation.&descSize=14&descAlignY=68" alt="Smart Waste Detection Using YOLO V8" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/Mohamedzuhair17/Smart-Waste-detection-using-YOLO-V8"><img src="https://img.shields.io/badge/Repository-111111?style=for-the-badge&logo=github" alt="repo" /></a>
+  <img src="https://img.shields.io/github/stars/Mohamedzuhair17/=for-the-badge&color=111111" alt="stars" />
+  <img src="https://img.shields.io/github/forks/Mohamedzuhair17/=for-the-badge&color=111111" alt="forks" />
+  <img src="https://img.shields.io/github/last-commit/Mohamedzuhair17/=for-the-badge&color=111111" alt="last commit" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Stack-Python-F6F1EA?style=for-the-badge&labelColor=111111&color=F6F1EA" alt="stack" />
+  <img src="https://img.shields.io/badge/Engineering-Production%20Grade-111111?style=for-the-badge" alt="engineering" />
+</p>
+<!-- EFFECTS-BLOCK:END -->
+
+---
+
 # Smart Waste Detection using YOLOv8
 
 AI-powered Streamlit app for detecting and classifying waste as **ORGANIC** or **NON-ORGANIC** using a trained YOLOv8 model.
